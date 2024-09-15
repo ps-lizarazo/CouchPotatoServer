@@ -66,6 +66,21 @@ class Loader(object):
         hdlr.setFormatter(formatter)
         self.log.logger.addHandler(hdlr)
 
+        false_value = False
+        if false_value:
+            print("Line 1 Not covered")
+            print("Line 2 Not covered")
+            print("Line 3 Not covered")
+            print("Line 4 Not covered")
+            print("Line 5 Not covered")
+            print("Line 5 Not covered")
+            print("Line 4 Not covered")
+            print("Line 3 Not covered")
+            print("Line 2 Not covered")
+            print("Line 1 Not covered")
+
+            
+
     def addSignals(self):
         signal.signal(signal.SIGINT, self.onExit)
         signal.signal(signal.SIGTERM, lambda signum, stack_frame: sys.exit(1))
